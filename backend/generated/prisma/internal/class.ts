@@ -46,16 +46,17 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://chat-db_owner:npg_n5SRNFx7KtPI@ep-autumn-poetry-a26y7st9-pooler.eu-central-1.aws.neon.tech/chat-db?sslmode=require"
+        "value": null
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id       String @id @default(uuid())\n  username String @unique\n  fullname String\n  password String\n\n  profilePicture String\n  createdAt      DateTime @default(now())\n  updatedAt      DateTime @updatedAt\n\n  chatIds  String[]\n  chats    Chat[]\n  messages Message[]\n}\n\nmodel Chat {\n  id        String   @id @default(uuid())\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  participantIds String[]\n  participants   User[]\n\n  messageIds String[]\n  messages   Message[]\n}\n\nmodel Message {\n  id     String @id @default(uuid())\n  chatId String\n  chat   Chat   @relation(fields: [chatId], references: [id])\n\n  senderId String\n  sender   User   @relation(fields: [senderId], references: [id])\n\n  body      String\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n",
-  "inlineSchemaHash": "38c9c61be547df4d57a2c3226f9ddbc0c9c5992d40c331c9629e841e4876ae8f",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id             String @id @default(uuid())\n  username       String @unique\n  fullname       String\n  password       String\n  profilePicture String\n\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  chatIds  String[]\n  chats    Chat[]\n  messages Message[]\n}\n\nmodel Chat {\n  id        String   @id @default(uuid())\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  participantIds String[]\n  participants   User[]\n\n  messageIds String[]\n  messages   Message[]\n}\n\nmodel Message {\n  id     String @id @default(uuid())\n  chatId String\n  chat   Chat   @relation(fields: [chatId], references: [id])\n\n  senderId String\n  sender   User   @relation(fields: [senderId], references: [id])\n\n  body      String\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n",
+  "inlineSchemaHash": "b01c1f21ec217e5ea37abe5599c347dac8f3fda322f708432719e4ae45331b74",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
