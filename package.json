@@ -1,0 +1,30 @@
+{
+    "name": "chat",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsx watch backend/src/index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BreezBay2/chat.git"
+    },
+    "type": "module",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/BreezBay2/chat/issues"
+    },
+    "homepage": "https://github.com/BreezBay2/chat#readme",
+    "description": "",
+    "devDependencies": {
+        "@types/express": "^5.0.1",
+        "tsx": "^4.19.4",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "dotenv": "^16.5.0",
+        "express": "^5.1.0"
+    }
+}
