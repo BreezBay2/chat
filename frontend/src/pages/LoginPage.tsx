@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useLogin from "../hooks/useLogin";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
     const [loginFormData, setLoginFormData] = useState({
@@ -40,6 +41,7 @@ const LoginPage = () => {
                         })
                     }
                 />
+                <Link to={"/signup"}>Don't have an account?</Link>
                 <button disabled={loading}>
                     {loading ? "Loading..." : "Login"}
                 </button>

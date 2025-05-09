@@ -3,6 +3,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import { useAuthContext } from "./context/AuthContext";
+import SignupPage from "./pages/SignupPage";
 
 function App() {
     const { authUser, isLoading } = useAuthContext();
@@ -26,6 +27,10 @@ function App() {
                 <Route
                     path="/login"
                     element={!authUser ? <LoginPage /> : <Navigate to={"/"} />}
+                />
+                <Route
+                    path="/signup"
+                    element={!authUser ? <SignupPage /> : <Navigate to={"/"} />}
                 />
             </Routes>
         </>
