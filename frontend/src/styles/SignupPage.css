@@ -1,4 +1,4 @@
-.login-page {
+.signup-page {
     height: 100%;
     width: 100%;
     display: flex;
@@ -8,11 +8,11 @@
     padding: 20px;
 }
 
-.login-container {
+.signup-container {
     color: #db924c;
     background-color: #261b25;
     border-radius: 8px;
-    height: 550px;
+    height: 600px;
     width: 500px;
     min-width: 200px;
     display: flex;
@@ -21,22 +21,22 @@
     align-items: center;
 }
 
-.login-container h1 {
+.signup-container h1 {
     font-weight: 500;
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-.login-form {
-    margin-top: 20px;
-    padding: 0px 50px;
+.signup-form {
+    margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0px 50px;
 }
 
-.login-form input {
+.signup-form input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid#db924c;
@@ -44,13 +44,29 @@
     color: #db924c;
     border-radius: 8px;
     background-color: #261b25;
+    width: 100%;
 }
 
-.login-form input:focus {
+.signup-form input:focus {
     outline: 2px solid #db924c;
 }
 
-.login-form button {
+.signup-passwords {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #db924c;
+}
+
+.login-link:hover {
+    color: #af743d;
+}
+
+.signup-form button {
     background-color: #db924c;
     color: #1e151d;
     font-size: 20px;
@@ -60,16 +76,7 @@
     border-radius: 8px;
 }
 
-.login-form button:hover {
+.signup-form button:hover {
     background-color: #af743d;
     cursor: pointer;
-}
-
-.signup-link {
-    text-decoration: none;
-    color: #db924c;
-}
-
-.signup-link:hover {
-    color: #af743d;
 }
