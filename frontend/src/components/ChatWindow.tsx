@@ -1,0 +1,14 @@
+import React from "react";
+import Sidebar from "./Sidebar";
+import ChatContainer from "./ChatContainer";
+
+const ChatWindow = () => {
+    return (
+        <div className="chat-window">
+            <Sidebar />
+            <ChatContainer />
+        </div>
+    );
+};
+
+export default ChatWindow;
