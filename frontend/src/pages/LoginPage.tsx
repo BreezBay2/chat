@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import useLogin from "../hooks/useLogin";
 import { Link } from "react-router-dom";
 
+import "../styles/LoginPage.css";
+
 const LoginPage = () => {
     const [loginFormData, setLoginFormData] = useState({
         username: "",
@@ -16,36 +18,40 @@ const LoginPage = () => {
     };
 
     return (
-        <div>
-            <h1>Login</h1>
-            <form onSubmit={handleSubmitForm}>
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={loginFormData.username}
-                    onChange={(e) =>
-                        setLoginFormData({
-                            ...loginFormData,
-                            username: e.target.value,
-                        })
-                    }
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={loginFormData.password}
-                    onChange={(e) =>
-                        setLoginFormData({
-                            ...loginFormData,
-                            password: e.target.value,
-                        })
-                    }
-                />
-                <Link to={"/signup"}>Don't have an account?</Link>
-                <button disabled={loading}>
-                    {loading ? "Loading..." : "Login"}
-                </button>
-            </form>
+        <div className="login-page">
+            <div className="login-container">
+                <h1>Login</h1>
+                <form onSubmit={handleSubmitForm} className="login-form">
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        value={loginFormData.username}
+                        onChange={(e) =>
+                            setLoginFormData({
+                                ...loginFormData,
+                                username: e.target.value,
+                            })
+                        }
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={loginFormData.password}
+                        onChange={(e) =>
+                            setLoginFormData({
+                                ...loginFormData,
+                                password: e.target.value,
+                            })
+                        }
+                    />
+                    <Link className="signup-link" to={"/signup"}>
+                        Don't have an account?
+                    </Link>
+                    <button disabled={loading}>
+                        {loading ? "Loading..." : "Login"}
+                    </button>
+                </form>
+            </div>
         </div>
     );
 };

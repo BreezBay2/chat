@@ -15,8 +15,7 @@ function App() {
     }
 
     return (
-        <>
-            <h1>Hello World</h1>
+        <div className="app">
             <Routes>
                 <Route
                     path="/"
@@ -33,7 +32,7 @@ function App() {
                     element={!authUser ? <SignupPage /> : <Navigate to={"/"} />}
                 />
             </Routes>
-        </>
+        </div>
     );
 }
 
