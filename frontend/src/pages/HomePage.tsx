@@ -1,13 +1,11 @@
 import { useAuthContext } from "../context/AuthContext";
-import useLogout from "../hooks/useLogout";
+import "../styles/HomePage.css";
 
 const HomePage = () => {
-    const { logout } = useLogout();
     const { authUser } = useAuthContext();
     return (
-        <div>
+        <div className="home-page">
             <h1>Welcome Back, {authUser?.username}</h1>
-            <button onClick={logout}>Logout</button>
         </div>
     );
 };

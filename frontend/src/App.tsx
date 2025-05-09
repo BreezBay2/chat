@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import { useAuthContext } from "./context/AuthContext";
 import SignupPage from "./pages/SignupPage";
+import Navbar from "./components/Navbar";
 
 function App() {
     const { authUser, isLoading } = useAuthContext();
@@ -16,6 +17,7 @@ function App() {
 
     return (
         <div className="app">
+            {authUser && <Navbar />}
             <Routes>
                 <Route
                     path="/"
