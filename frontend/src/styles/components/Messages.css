@@ -1,7 +1,14 @@
 .messages-container {
+    height: 100%;
     width: 100%;
     padding: 16px;
     display: flex;
     flex-direction: column;
     overflow: auto;
+}
+
+.empty-chat {
+    margin: auto 0px;
+    color: #db924c;
+    align-self: center;
 }

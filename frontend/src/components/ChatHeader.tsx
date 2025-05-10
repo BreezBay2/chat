@@ -1,17 +1,25 @@
 import { X } from "@phosphor-icons/react";
 import "../styles/components/ChatHeader.css";
+import useChatStore from "../zustand/useChatStore";
 
 const ChatHeader = () => {
+    const { selectedUser, setSelectedUser } = useChatStore();
+
     return (
         <div className="header-container">
             <div className="header-user">
-                <img src="placeholder-avatar.png" />
+                <img src={selectedUser?.profilePicture} />
                 <div className="header-names">
-                    <p>John Doe</p>
+                    <p>{selectedUser?.fullname}</p>
                     <p className="header-online-status">Offline</p>
                 </div>
             </div>
-            <X size={32} color="#db924c" weight="bold" />
+            <X
+                size={32}
+                weight="bold"
+                className="close-chat"
+                onClick={() => setSelectedUser(null)}
+            />
         </div>
     );
 };

@@ -21,3 +21,12 @@
 .header-online-status {
     font-size: 13px;
 }
+
+.close-chat {
+    color: #db924c;
+}
+
+.close-chat:hover {
+    cursor: pointer;
+    color: #af743d;
+}

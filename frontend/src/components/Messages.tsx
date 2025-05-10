@@ -12,6 +12,11 @@ const Messages = () => {
                 messages.map((message) => (
                     <Message key={message.id} message={message} />
                 ))}
+            {!loading && messages.length === 0 && (
+                <p className="empty-chat">
+                    No Messages yet. Send a message to start a chat!
+                </p>
+            )}
         </div>
     );
 };

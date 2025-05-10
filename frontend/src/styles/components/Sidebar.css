@@ -1,6 +1,7 @@
 .sidebar {
     height: 100%;
     width: 20%;
+    min-width: 200px;
     /* border: 1px solid #db924c; */
     padding: 0px 5px;
 }
@@ -13,16 +14,37 @@
 }
 
 .user-container {
+    margin: 5px 0px;
     padding: 10px;
     display: flex;
     align-items: center;
-    border-top: 1px solid rgba(18, 10, 17, 0.6);
     color: #db924c;
     gap: 10px;
 }
 
+.user-container-selected {
+    margin: 5px 0px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: #db924c;
+    background-color: #1e151d;
+    gap: 10px;
+}
+
+.user-container-selected img {
+    width: 40px;
+}
+
 .user-container img {
     width: 40px;
+}
+
+.user-divider {
+    height: 1px;
+    background-color: rgba(18, 10, 17, 0.6);
+    width: 100%;
 }
 
 .online-status {
