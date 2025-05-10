@@ -1,5 +1,6 @@
 import { useAuthContext } from "../context/AuthContext";
 import "../styles/components/Message.css";
+import { formatMessageTime } from "../utils/timeFormatter";
 import type { MessageType } from "../zustand/useChatStore";
 import useChatStore from "../zustand/useChatStore";
 
@@ -22,7 +23,9 @@ const Message = ({ message }: { message: MessageType }) => {
             <p className={myMessage ? "message-bubble-own" : "message-bubble"}>
                 {message.body}
             </p>
-            <p className="message-timestamp">{message.createdAt}</p>
+            <p className="message-timestamp">
+                {formatMessageTime(message.createdAt)}
+            </p>
         </div>
     );
 };

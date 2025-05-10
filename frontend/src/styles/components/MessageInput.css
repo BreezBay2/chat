@@ -18,3 +18,16 @@
 .message-input-container input:focus {
     outline: 1px solid #db924c;
 }
+
+.message-input-container button {
+    aspect-ratio: 1;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #120a11;
+    border: none;
+}
+
+.message-input-container button:hover {
+    cursor: pointer;
+    background-color: #181017;
+}

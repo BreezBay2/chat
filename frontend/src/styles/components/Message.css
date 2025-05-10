@@ -36,7 +36,7 @@
 .message-bubble {
     position: relative;
     padding: 10px 20px;
-    border-radius: 20px 20px 20px 0px;
+    border-radius: 16px 16px 16px 0px;
     background-color: #120a11;
     color: #db924c;
     max-width: 500px;
@@ -68,9 +68,9 @@
 .message-bubble-own {
     position: relative;
     padding: 10px 20px;
-    border-radius: 20px 20px 0px 20px;
+    border-radius: 16px 16px 0px 16px;
     background-color: #db924c;
-    width: 200px;
+    max-width: 500px;
     align-self: flex-end;
 
     &:before {

@@ -4,6 +4,7 @@
     min-width: 200px;
     /* border: 1px solid #db924c; */
     padding: 0px 5px;
+    overflow: auto;
 }
 
 .sidebar h1 {
@@ -20,9 +21,16 @@
     align-items: center;
     color: #db924c;
     gap: 10px;
+    border-radius: 10px;
+}
+
+.user-container:hover {
+    cursor: pointer;
+    background-color: #1e151d;
 }
 
 .user-container-selected {
+    cursor: pointer;
     margin: 5px 0px;
     padding: 10px;
     display: flex;

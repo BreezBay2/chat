@@ -27,7 +27,6 @@ const Sidebar = () => {
                             <p className="online-status">Offline</p>
                         </div>
                     </div>
-                    <div className="user-divider" />
                 </div>
             ))}
             {loading ? <h1>Loading...</h1> : null}
