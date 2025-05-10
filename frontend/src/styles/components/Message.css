@@ -1,11 +1,27 @@
 .message-container {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.message-container-own {
+    display: flex;
+    flex-direction: row-reverse;
     gap: 20px;
     align-items: flex-end;
     margin-bottom: 20px;
 }
 
 .message-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.message-container-own img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -19,9 +35,10 @@
 
 .message-bubble {
     position: relative;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-radius: 20px 20px 20px 0px;
-    background-color: #db924c;
+    background-color: #120a11;
+    color: #db924c;
     max-width: 500px;
     align-self: flex-start;
 
@@ -32,7 +49,7 @@
         bottom: 0px;
         left: -7px;
         height: 20px;
-        border-left: 20px solid #db924c;
+        border-left: 20px solid #120a11;
     }
 
     &:after {
@@ -50,8 +67,7 @@
 
 .message-bubble-own {
     position: relative;
-    margin: 15px 5px;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-radius: 20px 20px 0px 20px;
     background-color: #db924c;
     width: 200px;

@@ -1,13 +1,20 @@
 import useGetUsers from "../hooks/useGetUsers";
 import "../styles/components/Sidebar.css";
+import useChatStore from "../zustand/useChatStore";
 
 const Sidebar = () => {
     const { users, loading } = useGetUsers();
+    const { setSelectedUser } = useChatStore();
+
     return (
         <div className="sidebar">
             <h1>Chats</h1>
             {users.map((user) => (
-                <div className="user-container">
+                <div
+                    className="user-container"
+                    key={user.id}
+                    onClick={() => setSelectedUser(user)}
+                >
                     <img src={user.profilePicture} />
                     <div>
                         <p>{user.fullname}</p>

@@ -1,11 +1,28 @@
+import { useAuthContext } from "../context/AuthContext";
 import "../styles/components/Message.css";
+import type { MessageType } from "../zustand/useChatStore";
+import useChatStore from "../zustand/useChatStore";
 
-const Message = () => {
+const Message = ({ message }: { message: MessageType }) => {
+    const { authUser } = useAuthContext();
+    const { selectedUser } = useChatStore();
+
+    const myMessage = message?.senderId === authUser?.id;
+    const image = myMessage
+        ? authUser?.profilePicture
+        : selectedUser?.profilePicture;
+
     return (
-        <div className="message-container">
-            <img src="placeholder-avatar.png" />
-            <div className="message-bubble">Test Message Test Message</div>
-            <p className="message-timestamp">22:22</p>
+        <div
+            className={
+                myMessage ? "message-container-own" : "message-container"
+            }
+        >
+            <img src={image} />
+            <p className={myMessage ? "message-bubble-own" : "message-bubble"}>
+                {message.body}
+            </p>
+            <p className="message-timestamp">{message.createdAt}</p>
         </div>
     );
 };
