@@ -1,5 +1,31 @@
 .sidebar {
     height: 100%;
     width: 20%;
-    border: 1px solid #db924c;
+    /* border: 1px solid #db924c; */
+    padding: 0px 5px;
+}
+
+.sidebar h1 {
+    margin: 10px;
+    color: #db924c;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.user-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(219, 146, 76, 0.2);
+    color: #db924c;
+    gap: 10px;
+}
+
+.user-container img {
+    width: 40px;
+}
+
+.online-status {
+    font-size: 11px;
+    color: #c59f61;
 }
