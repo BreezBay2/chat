@@ -5,7 +5,7 @@ const Sidebar = () => {
     const { users, loading } = useGetUsers();
     return (
         <div className="sidebar">
-            <h1>Users</h1>
+            <h1>Chats</h1>
             {users.map((user) => (
                 <div className="user-container">
                     <img src={user.profilePicture} />
