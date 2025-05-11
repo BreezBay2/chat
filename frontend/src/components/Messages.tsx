@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import useGetMessages from "../hooks/useGetMessages";
 import useListenMessages from "../hooks/useListenMessages";
 import "../styles/components/Messages.css";
@@ -6,9 +7,16 @@ import Message from "./Message";
 const Messages = () => {
     const { messages, loading } = useGetMessages();
     useListenMessages();
+    const messagesRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (messagesRef.current) {
+            messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
+        }
+    }, [messages]);
 
     return (
-        <div className="messages-container">
+        <div className="messages-container" ref={messagesRef}>
             {loading && <h1>Loading...</h1>}
             {!loading &&
                 messages.map((message) => (
