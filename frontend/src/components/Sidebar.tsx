@@ -1,3 +1,4 @@
+import { useSocketContext } from "../context/SocketContext";
 import useGetUsers from "../hooks/useGetUsers";
 import "../styles/components/Sidebar.css";
 import useChatStore from "../zustand/useChatStore";
@@ -5,6 +6,7 @@ import useChatStore from "../zustand/useChatStore";
 const Sidebar = () => {
     const { users, loading } = useGetUsers();
     const { selectedUser, setSelectedUser } = useChatStore();
+    const { onlineUsers } = useSocketContext();
 
     return (
         <div className="sidebar">
@@ -23,7 +25,14 @@ const Sidebar = () => {
                     <img src={user.profilePicture} />
                     <div>
                         <p>{user.fullname}</p>
-                        <p className="online-status">Offline</p>
+                        {onlineUsers.includes(user.id) ? (
+                            <div className="online-status">
+                                <div className="online-icon"></div>
+                                <p>Online</p>
+                            </div>
+                        ) : (
+                            <p className="offline-status">Offline</p>
+                        )}
                     </div>
                 </div>
             ))}
