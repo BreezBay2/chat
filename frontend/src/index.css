@@ -5,3 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+::-webkit-scrollbar-track {
+    background: blue;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #121212;
+    border-radius: 5px;
+}
