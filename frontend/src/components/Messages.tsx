@@ -1,9 +1,11 @@
 import useGetMessages from "../hooks/useGetMessages";
+import useListenMessages from "../hooks/useListenMessages";
 import "../styles/components/Messages.css";
 import Message from "./Message";
 
 const Messages = () => {
     const { messages, loading } = useGetMessages();
+    useListenMessages();
 
     return (
         <div className="messages-container">

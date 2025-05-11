@@ -11,21 +11,19 @@ const Sidebar = () => {
             <h1>Chats</h1>
             <div className="user-divider" />
             {users.map((user) => (
-                <div>
-                    <div
-                        className={
-                            selectedUser?.id === user.id
-                                ? "user-container-selected"
-                                : "user-container"
-                        }
-                        key={user.id}
-                        onClick={() => setSelectedUser(user)}
-                    >
-                        <img src={user.profilePicture} />
-                        <div>
-                            <p>{user.fullname}</p>
-                            <p className="online-status">Offline</p>
-                        </div>
+                <div
+                    className={
+                        selectedUser?.id === user.id
+                            ? "user-container-selected"
+                            : "user-container"
+                    }
+                    key={user.id}
+                    onClick={() => setSelectedUser(user)}
+                >
+                    <img src={user.profilePicture} />
+                    <div>
+                        <p>{user.fullname}</p>
+                        <p className="online-status">Offline</p>
                     </div>
                 </div>
             ))}
