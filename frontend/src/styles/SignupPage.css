@@ -12,6 +12,7 @@
     color: #db924c;
     background-color: #261b25;
     border-radius: 8px;
+    font-size: 14px;
     height: 600px;
     width: 500px;
     min-width: 200px;
@@ -38,7 +39,7 @@
 
 .signup-form input {
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid#db924c;
     outline: none;
     color: #db924c;
@@ -69,7 +70,7 @@
 .signup-form button {
     background-color: #db924c;
     color: #1e151d;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     border: none;
     padding: 15px;

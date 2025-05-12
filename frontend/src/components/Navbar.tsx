@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/components/Navbar.css";
-import { SignOut } from "@phosphor-icons/react";
+import { SignOut, UserCircle } from "@phosphor-icons/react";
 import useLogout from "../hooks/useLogout";
 
 const Navbar = () => {
@@ -14,7 +14,12 @@ const Navbar = () => {
                 </Link>
                 <div className="navbar-right">
                     <Link className="navbar-link" to={"/"}>
-                        Profile
+                        <UserCircle
+                            size={32}
+                            className="profile-icon"
+                            weight="bold"
+                        />
+                        <p>Profile</p>
                     </Link>
                     <SignOut
                         size={32}

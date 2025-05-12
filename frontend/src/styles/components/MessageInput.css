@@ -1,18 +1,18 @@
 .message-input-container {
     border-top: 1px solid rgba(18, 10, 17, 0.6);
-    padding: 20px 20px 0px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: 10px;
-    margin-bottom: 20px;
     margin-top: auto;
 }
 
 .message-input-container textarea {
     width: 100%;
-    min-height: 45px;
+    height: 40px;
     max-height: 200px;
+    font-size: 14px;
     padding: 8px;
     background-color: #261b25;
     border: 1px solid #db924c;
@@ -27,8 +27,8 @@
 }
 
 .message-input-container button {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

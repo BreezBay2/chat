@@ -1,7 +1,7 @@
 .message-container {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-end;
     margin-bottom: 20px;
 }
@@ -9,7 +9,7 @@
 .message-container-own {
     display: flex;
     flex-direction: row-reverse;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-end;
     margin-bottom: 20px;
 }
@@ -34,12 +34,14 @@
 }
 
 .message-bubble {
+    margin-left: 10px;
     position: relative;
     padding: 10px 20px;
+    font-size: 14px;
     border-radius: 16px 16px 16px 0px;
     background-color: #120a11;
     color: #db924c;
-    max-width: 500px;
+    max-width: 400px;
     align-self: flex-start;
 
     &:before {
@@ -66,11 +68,13 @@
 }
 
 .message-bubble-own {
+    margin-right: 10px;
     position: relative;
     padding: 10px 20px;
+    font-size: 14px;
     border-radius: 16px 16px 0px 16px;
     background-color: #db924c;
-    max-width: 500px;
+    max-width: 400px;
     align-self: flex-end;
 
     &:before {

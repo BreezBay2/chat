@@ -29,7 +29,7 @@ const ChatHeader = () => {
                 </div>
             </div>
             <X
-                size={32}
+                size={26}
                 weight="bold"
                 className="close-chat"
                 onClick={() => setSelectedUser(null)}
