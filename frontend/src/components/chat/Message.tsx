@@ -1,8 +1,8 @@
-import { useAuthContext } from "../context/AuthContext";
-import "../styles/components/Message.css";
-import { formatMessageTime } from "../utils/timeFormatter";
-import type { MessageType } from "../zustand/useChatStore";
-import useChatStore from "../zustand/useChatStore";
+import "../../styles/components/Message.css";
+import { formatMessageTime } from "../../utils/timeFormatter";
+import type { MessageType } from "../../zustand/useChatStore";
+import useChatStore from "../../zustand/useChatStore";
+import { useAuthContext } from "../../context/AuthContext";
 
 const Message = ({ message }: { message: MessageType }) => {
     const { authUser } = useAuthContext();

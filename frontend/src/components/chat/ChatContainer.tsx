@@ -1,9 +1,9 @@
-import { useAuthContext } from "../context/AuthContext";
-import "../styles/components/ChatContainer.css";
-import useChatStore from "../zustand/useChatStore";
+import { useAuthContext } from "../../context/AuthContext";
+import "../../styles/components/ChatContainer.css";
+import useChatStore from "../../zustand/useChatStore";
 import ChatHeader from "./ChatHeader";
-import MessageInput from "./MessageInput";
 import Messages from "./Messages";
+import MessageInput from "./MessageInput";
 
 const ChatContainer = () => {
     const { authUser } = useAuthContext();

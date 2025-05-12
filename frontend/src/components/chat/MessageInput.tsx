@@ -1,7 +1,7 @@
 import { PaperPlaneTilt } from "@phosphor-icons/react";
-import "../styles/components/MessageInput.css";
+import "../../styles/components/MessageInput.css";
 import { useState } from "react";
-import useSendMessage from "../hooks/useSendMessage";
+import useSendMessage from "../../hooks/useSendMessage";
 
 const MessageInput = () => {
     const [message, setMessage] = useState("");

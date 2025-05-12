@@ -1,7 +1,7 @@
 import { X } from "@phosphor-icons/react";
-import "../styles/components/ChatHeader.css";
-import useChatStore from "../zustand/useChatStore";
-import { useSocketContext } from "../context/SocketContext";
+import "../../styles/components/ChatHeader.css";
+import useChatStore from "../../zustand/useChatStore";
+import { useSocketContext } from "../../context/SocketContext";
 
 const ChatHeader = () => {
     const { selectedUser, setSelectedUser } = useChatStore();
